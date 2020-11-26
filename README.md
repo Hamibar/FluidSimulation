@@ -1,7 +1,10 @@
 # FluidSimulation
-  Simple simulation of incompressible fluid/gas based on Navier-Stokes equations.
+Simple simulation of incompressible fluid/gas based on Navier-Stokes equations.
 It is not a real physical simulation, but fluid movement looks believable.
 This simulation is largely based on this article https://mikeash.com/pyblog/fluid-simulation-for-dummies.html
+
+## Video
+https://www.youtube.com/watch?v=FLTG29HPuNQ
 
 ## Frameworks
 The SFML library is used to render the window. https://www.sfml-dev.org/
@@ -65,38 +68,38 @@ MainBlock {
 Spaces between `BlockName` and `{` needed. You can find real examples after the parameter list.
 
 #### GRAPHIC parameters:
-* `WINDOW_RESOLUTION: float`  :  defines the ratio of screen size to simulation size; **_2 by default_**
-* `BI_COLORIZER_COLOR_1: int8 int8 int8` : start color for the 2-color filter;  **_0 0 0 by default_**
-* `BI_COLORIZER_COLOR_2: int8 int8 int8` : end color for the 2-color filter; **_0 0 0 by default_**
-* `SIMPLE_COLORIZER_COLOR: int8 int8 int8` : color for the simple filter;  **_0 0 0 by default_**
-* `COLORIZER_TYPE: std::string` **_SIMPLE by default_**
+* `WINDOW_RESOLUTION: float`:  defines the ratio of screen size to simulation size; **_2 by default_**
+* `BI_COLORIZER_COLOR_1: int8 int8 int8`: start color for the 2-color filter;  **_0 0 0 by default_**
+* `BI_COLORIZER_COLOR_2: int8 int8 int8`: end color for the 2-color filter; **_0 0 0 by default_**
+* `SIMPLE_COLORIZER_COLOR: int8 int8 int8`: color for the simple filter;  **_0 0 0 by default_**
+* `COLORIZER_TYPE: std::string`; **_SIMPLE by default_**
 	
 Colorizer types:
-*  `WB` : black and white filter
-*  `SIMPLE` : 1-color filter
-*  `BI` : 2-color filter
+*  `WB`: black and white filter
+*  `SIMPLE`: 1-color filter
+*  `BI`: 2-color filter
 
 #### CONTROLLER parameters:	
-* `MOUSE_ENABLE: 1 or 0` :  1 - enable ability to add dye with mouse; **_0 by default_** 
-* `MOUSE_POWER: int` : speed factor; **_0 by default_**
-* `MOUSE_DENS: int` : the amount of dye produced by mouse; **_0  by default_**
+* `MOUSE_ENABLE: 1 or 0`:  1 - enable ability to add dye with mouse; **_0 by default_** 
+* `MOUSE_POWER: int`: speed factor; **_0 by default_**
+* `MOUSE_DENS: int`: the amount of dye produced by mouse; **_0  by default_**
 
 #### SIMULATION parameters:
-* `SIMULATION_SIZE: int` : side size of the vector field (recommend using value bigger than 160); **_200 by default_**
-* `SIMULATION_VISC: float` : fluid viscosity value; **_0 by default_**
-* `SIMULATION_DIFF: float` : fluid diffusion value; **_0 by default_**
-* `SIMULATION_DT: float` : time passed by one simulation step; **_1 by default_**
+* `SIMULATION_SIZE: int`: side size of the vector field (recommend using value bigger than 160); **_200 by default_**
+* `SIMULATION_VISC: float`: fluid viscosity value; **_0 by default_**
+* `SIMULATION_DIFF: float`: fluid diffusion value; **_0 by default_**
+* `SIMULATION_DT: float`: time passed by one simulation step; **_1 by default_**
 * subBlock `SOURCE`:
-    * `TYPE: std::string` **_SIMPLE by default_**
-    * `POS_X: int` : x coordinate; **_0 by default_**
-    * `POS_Y: int` : y coordinate; **_0 by default_**
-    * `POWER: float` : speed vector length; **_0 by default_**			
-    * `DENS_AMOUNT: float` : dye amount per tick; **_0 by default_**
-    * `START_ANGLE: float` : start direction in radians; **_0 by default_**
-    * `ROT_SPEED: float` : rotation angle change per tick in radians(used in CIRCLE source type); **_0 by default_** </br>
+    * `TYPE: std::string`; **_SIMPLE by default_**
+    * `POS_X: int`: x coordinate; **_0 by default_**
+    * `POS_Y: int`: y coordinate; **_0 by default_**
+    * `POWER: float`: speed vector length; **_0 by default_**			
+    * `DENS_AMOUNT: float`: dye amount per tick; **_0 by default_**
+    * `START_ANGLE: float`: start direction in radians; **_0 by default_**
+    * `ROT_SPEED: float`: rotation angle change per tick in radians(used in CIRCLE source type); **_0 by default_** </br>
    Source types: 
-    * `SIMPLE` : constant source directed one way. 
-    * `CIRCLE` : rotating constant source.
+    * `SIMPLE`: constant source directed one way. 
+    * `CIRCLE`: rotating constant source.
    
 #### Example:
 ```
