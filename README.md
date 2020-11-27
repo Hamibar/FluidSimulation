@@ -42,7 +42,7 @@ if you are using VS:
 #### For Linux:
 ```
   $ sudo apt-get install libsfml-dev  // if SFML is not installed:
-  $ git clone https://github.com/
+  $ git clone https://github.com/Hamibar/FluidSimulation
   $ cd FluidSimulation
   $ mkdir build
   $ cd build
