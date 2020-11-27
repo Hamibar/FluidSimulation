@@ -23,7 +23,7 @@ target_link_libraries(fl_sim sfml-graphics)
 
 #copy dynamic libraries into work directory
 if (WIN32)
-	string(REPLACE "lib\\cmake\\sfml" "bin" SFML_BIN_DIR ${SFML_DIR})
+	string(REPLACE "lib\\cmake\\SFML" "bin" SFML_BIN_DIR ${SFML_DIR})
 	add_custom_command(TARGET fl_sim POST_BUILD
 				COMMAND ${CMAKE_COMMAND} -E copy_directory
 				${SFML_BIN_DIR}
