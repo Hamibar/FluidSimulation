@@ -22,8 +22,8 @@ if you are using minGW:
   > cd FluidSimulation
   > mkdir build
   > cd build
-  > cmake -DCMAKE_BUILD_TYPE=Release -DSFML_DIR="path to sfml lib" -G "MinGW Makefiles" ..
-  > cmake --build .. 
+  > cmake -DCMAKE_BUILD_TYPE="Release" -DSFML_DIR="path to sfml lib" -G "MinGW Makefiles" ..
+  > cmake --build .
   > cd bin
   > fl_sim.exe path_to_config_file
 ```
@@ -33,7 +33,7 @@ if you are using VS:
   > cd FluidSimulation
   > mkdir build
   > cd build
-  > cmake -DSFML_DIR="path to sfml lib" 
+  > cmake -DSFML_DIR="path to sfml lib" ..
   > cmake --build . --config Release
   > cd bin/Release
   > fl_sim.exe path_to_config_file
@@ -46,7 +46,7 @@ if you are using VS:
   $ cd FluidSimulation
   $ mkdir build
   $ cd build
-  $ cmake -DCMAKE_BUILD_TYPE=Release .
+  $ cmake -DCMAKE_BUILD_TYPE="Release" ..
   $ cmake --build .
   $ cd bin
   $ ./fl_sim path_to_config_file
