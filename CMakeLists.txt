@@ -3,9 +3,9 @@ cmake_minimum_required(VERSION 3.5)
 project(FluidSimulation)
 
 file(GLOB HEADERS
-	"${PROJECT_SOURCE_DIR}/*.h")
+	"${PROJECT_SOURCE_DIR}/src/*.h")
 file(GLOB SOURCES
-	"${PROJECT_SOURCE_DIR}/*.cpp")
+	"${PROJECT_SOURCE_DIR}/src/*.cpp")
 
 set(EXECUTABLE_OUTPUT_PATH "bin")
 add_executable(fl_sim ${SOURCES} ${HEADERS})
